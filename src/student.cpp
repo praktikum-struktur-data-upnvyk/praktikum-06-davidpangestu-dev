@@ -106,13 +106,14 @@ bool dequeue(Queue& q, int& nomor) {
 // SOAL 3 — clear()                                                    25 poin
 // =============================================================================
 void clear(Queue& q) {
-  // TODO: kerjakan di sini
-  Node *bantu = q.depan;
-     while (bantu != nullptr) {
-     Node *hapus = bantu;
-     bantu = bantu->next;
-     delete hapus;
-     }
+    Node* bantu = q.depan;
+    while (bantu != nullptr) {
+        Node* hapus = bantu;
+        bantu = bantu->next;
+        delete hapus;
+    }
+    q.depan = nullptr;
+    q.belakang = nullptr;
 }
 
 // =============================================================================
